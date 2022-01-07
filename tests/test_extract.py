@@ -1,7 +1,7 @@
 """Check that data can be extracted from structured data files.
 
 The `load_cdc_data` function should load a collection of `CDCTrackingObject`s from a
-CSV file.
+CSV file `TEST_COVID_FILE`.
 
 To run these tests from the project root, run:
 
