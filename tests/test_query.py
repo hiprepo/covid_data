@@ -27,8 +27,6 @@ TEST_COVID_FILE = TESTS_ROOT / 'test-covid-2021-states-covid-history.csv'
 
 
 class TestQuery(unittest.TestCase):
-    # Set longMessage to True to enable lengthy diffs between set comparisons.
-    longMessage = False
 
     @classmethod
     def setUpClass(cls):
@@ -41,11 +39,11 @@ class TestQuery(unittest.TestCase):
            cls.cdc_data_by_state[d.state].append(d)
 
     def test_query_all(self):
-        expected = set(self.cdc_objs)
+        expected = list(self.cdc_objs)
         self.assertGreater(len(expected), 0)
 
         filters = create_filters()
-        received = set(self.db.query(filters))
+        received = list(self.db.query(filters))
         self.assertEqual(expected, received, msg="Computed results do not match expected results.")
 
     ###############################################
