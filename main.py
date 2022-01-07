@@ -4,7 +4,7 @@
 
 This script can be invoked from the command line::
 
-    $ python3 main.py {inspect,query,interactive} [args]
+    $ python3 main.py {inspect,query} [args]
 
 The `inspect` subcommand looks up the COVID tracking data by date or by state.
 
@@ -36,9 +36,6 @@ from filters import create_filters, limit
 # Paths to the root of the project and the `data` subfolder.
 PROJECT_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PROJECT_ROOT / 'data'
-
-# The current time, for use with the kill-on-change feature of the interactive shell.
-_START = time.time()
 
 
 def date_fromisoformat(date_string):
