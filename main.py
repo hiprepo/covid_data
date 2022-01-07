@@ -123,7 +123,7 @@ def make_parser():
 
     query.add_argument('-l', '--limit', type=int,
                        help="The maximum number of matches to return. "
-                            "Defaults to 50 if no --outfile is given.")
+                            "Defaults to 50.")
     return parser, inspect, query
 
 
@@ -162,10 +162,7 @@ def query(database, args):
     Create a collection of filters with `create_filters` and supply them to the
     database's `query` method to produce a stream of matching results.
 
-    If an output file wasn't given, print these results to stdout, limiting to
-    50 entries if no limit was specified. If an output file was given, use the
-    file's extension to infer whether the file should hold CSV or JSON data, and
-    then write the results to the output file in that format.
+    Print matching results to stdout, limiting to 50 entries if no limit was specified.
 
     :param database: The `CDCTrackingDatabase` containing data on COVID tracking data.
     :param args: All arguments from the command line, as parsed by the top-level parser.
