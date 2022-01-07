@@ -26,8 +26,8 @@ a subset of the sample COVID CSV file ranging from 2021-01-01 to 2021-03-07.
     
 To run these tests from the project root, run::
 
-$ python3 -m unittest --verbose
+    $ python3 -m unittest --verbose
     
 To run individuate test from the project root, for example, test_query.py, run:
     
-$ python3 -m unittest --verbose tests.test_query
+    $ python3 -m unittest --verbose tests.test_query
