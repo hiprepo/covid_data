@@ -22,7 +22,7 @@ The `query` subcommand searches for COVID tracking data that match given criteri
     
 # Testing
 There are 2 tests in the tests directory, test_extract.py and test_query.py.  These tests use
-a subset of the sample Covid csv file ranging from 2021-01-01 to 2021-03-07.
+a subset of the sample COVID CSV file ranging from 2021-01-01 to 2021-03-07.
     
 To run these tests from the project root, run::
 
